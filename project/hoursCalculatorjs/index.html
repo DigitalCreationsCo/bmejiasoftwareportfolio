@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>HOURS WORKED CALCULATOR</title>
+<link rel='stylesheet' type='text/css' href='hoursstyle.css'>
+<link href="https://fonts.googleapis.com/css?family=Poppins:500i|Roboto+Condensed:300&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<div id='main'>
+<div id='heading'>
+<h1>Hours Calculator</h1>
+</div>
+
+<div id='subheading'>
+<h3 id='text'>What hours were worked?</h3>
+</div>
+
+<div id='timeinput'>
+<div id='start'>
+<h4>Insert Starting Time</h4>
+<span>HOURS </span><input type='number' id='starthour' name='starthr' min='1' max='12'>
+<span>MINUTES </span><input type='number' id='startminute' name='startmin' min='0' max='59'>
+<select id="startampm" class="ampm">
+<option value="am">am</option>
+<option value="pm">pm</option>
+</select>
+</div>
+
+<div id='fin'>
+<h4>Insert Finishing Time</h4>
+<span>HOURS </span><input type='number' id='endhour' name='finhr' min='1' max='12'>
+<span>MINUTES </span><input type='number' id='endminute' name='finmin' min='0' max='59'>
+<select id="endampm" class="ampm">
+<option value="am">am</option>
+<option value="pm">pm</option>
+</select>
+</div>
+<div id='button'>
+<button type='submit' id='submit' name='submit' onclick='calcTime()'>Submit</button>
+<button type='reset' id='reset' name='reset' onclick='restart()'>Reset</button>
+</div>
+</div>
+
+<div id='output'><hr>
+<span id='out'>
+</span>
+</div>
+</div>
+
+<script>
+//var text gets heading html element
+var text = document.getElementById('text');
+
+//var out gets html output element
+var out = document.getElementById('out');
+
+//var day is an array with the days of the week
+var day = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"];
+
+//count variable for looping through the array
+var count = 0;
+
+//var for holding the prompt with the day of the week
+var prompt = "What hours were worked on " + day[count];
+
+// function to calculate the hours for one day
+function calcTime() {
+var starthr = parseInt(document.getElementById('starthour').value, 10);
+var startmin = parseInt(document.getElementById('startminute').value, 10);
+var endhr = parseInt(document.getElementById('endhour').value, 10);
+var endmin = parseInt(document.getElementById('endminute').value, 10);
+
+//vars storing am or pm selection
+var startampm = document.getElementById('startampm').value;
+var endampm = document.getElementById('endampm').value;
+
+function calcHours(endhr, starthr) {
+if (startampm == "pm") {
+starthr = starthr + 12;
+}
+
+if (endampm == "pm") {
+endhr = endhr + 12;
+}
+
+if (starthr >= endhr) {
+endhr = endhr + 24;
+}
+
+var answer = endhr - starthr;
+console.log("starthr: " + starthr, "endhr: " + endhr);
+return answer;
+}
+
+var calchr = calcHours(endhr, starthr);
+
+function calcMinutes(endmin, startmin){
+if (startmin > endmin) {
+calchr --;
+endmin = endmin + 60;
+}
+var answer2 = endmin - startmin;
+return answer2;
+}
+
+var calcmin = calcMinutes(endmin, startmin);
+
+
+function print(calchr, calcmin){
+var hours = "hours";
+var minutes = "minutes";
+
+if (calchr > 0 && calchr < 2) {
+hours = "hour";
+}
+if (calcmin > 0 && calcmin < 2){
+minutes = "minute";
+}
+var output = `You worked a total of ${calchr} ${hours} and ${calcmin} ${minutes}.`;
+return output;
+}
+
+out.innerHTML = print(calchr, calcmin);
+}
+
+</script>
+
+</body>
+</html>

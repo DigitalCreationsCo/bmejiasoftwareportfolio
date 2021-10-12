@@ -1,0 +1,97 @@
+#body{
+	
+}
+
+#main {
+	background-color: #e9deed;
+	margin: 20px 0px 0px 40px;
+	padding: 10px 10px 0px 10px;
+	text-align: center;
+	width: 50%;
+	border-radius: 7px;
+}
+
+#heading{
+	margin: 0;
+	padding: 0;
+	font-family: 'Poppins', sans-serif;
+	letter-spacing: 2px;
+	color: #fdfde7;
+}
+
+#subheading{
+	margin: 0;
+	padding: 0;
+	font-family: 'Roboto Condensed', sans-serif;
+	font-weight: 100;
+	letter-spacing: 1px;
+}
+
+#timeinput{
+	margin: 0;
+	padding: 0;
+}
+
+.ampm {
+	margin: 5px;
+	padding: 0;
+	font-family: 'Roboto Condensed', sans-serif;
+	font-weight: 500;
+	font-size: 14px;
+	letter-spacing: 1px;
+	border-radius: 2px;
+	background-color: #fdfde7;
+}
+
+#output{
+	position: relative;
+	background-color: #e9deed;
+	margin-top: -10px;
+	padding: 20px;
+	border-radius: 6px;
+}
+
+span {
+	font-family: 'Roboto Condensed', sans-serif;
+	font-weight: 600;
+	letter-spacing: 1px;
+}
+
+h1{
+	margin: 0;
+	padding: 0;
+}
+
+h3{
+	margin: 0;
+	padding: 0;
+}
+
+h4{
+	margin: 0;
+	padding: 0;
+	font-family: 'Roboto Condensed', sans-serif;
+	letter-spacing: 1px;
+}
+
+h5{
+	margin: 0;
+	padding: 0;
+}
+
+input {
+	border-radius: 2px;	
+	margin: 5px;
+	background-color: #fdfde7;
+}
+
+button{
+	margin: 15px;
+	padding: 5px 15px;
+	font-family: 'Roboto Condensed', sans-serif;
+	font-weight: 500;
+	font-size: 18px;
+	letter-spacing: 1px;
+	border-radius: 3px;
+	background-color: #fdfde7;
+}
