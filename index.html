@@ -34,6 +34,24 @@
   <!-- Ionicons Script -->
   <script type="module" src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule="" src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons/ionicons.js"></script>
+
+  <!-- update the version number as needed -->
+  <script defer src="/__/firebase/9.1.2/firebase-app-compat.js"></script>
+  <!-- include only the Firebase features as you need -->
+  <script defer src="/__/firebase/9.1.2/firebase-auth-compat.js"></script>
+  <script defer src="/__/firebase/9.1.2/firebase-database-compat.js"></script>
+  <script defer src="/__/firebase/9.1.2/firebase-firestore-compat.js"></script>
+  <script defer src="/__/firebase/9.1.2/firebase-functions-compat.js"></script>
+  <script defer src="/__/firebase/9.1.2/firebase-messaging-compat.js"></script>
+  <script defer src="/__/firebase/9.1.2/firebase-storage-compat.js"></script>
+  <script defer src="/__/firebase/9.1.2/firebase-analytics-compat.js"></script>
+  <script defer src="/__/firebase/9.1.2/firebase-remote-config-compat.js"></script>
+  <script defer src="/__/firebase/9.1.2/firebase-performance-compat.js"></script>
+  <!-- 
+    initialize the SDK after all desired features are loaded, set useEmulator to false
+    to avoid connecting the SDK to running emulators.
+  -->
+  <script defer src="/__/firebase/init.js?useEmulator=true"></script>
 </head>
 <body>
   <!-- Navbar -->
@@ -60,17 +78,18 @@
   <!-- Hero Section-->
   <div id="hero" class="home">
 
-      <div class="hero-title">
-        <h2>
-          Bryant&nbsp;Mejia<br>
-          Software&nbsp;Engineer
-        </h2>
-      </div>
+      
 
       <div class="hero-img-container">
+        <div class="hero-title">
+          <h2>
+            Bryant&nbsp;Mejia<br>
+            Software&nbsp;Engineer
+          </h2>
+        </div>
         <div class="hero-content">
           <h1><span class="typed"></span></h1>
-          <p class="typed-items" data-typed-person="Bryant Mejia, Software Engineer, React, Node.js, MongoDb"></p>
+          <p class="typed-items" data-typed-person="Bryant Mejia, Software Engineer, ReactJS, React Native, Node.js, MongoDb, Express"></p>
           <ul class="list-unstyled list-social">
             <li><a target="_blank" href="https://www.linkedin.com/in/bryantmejia/"><ion-icon name="logo-linkedin"></ion-icon></a></li>
             <li><a target="_blank" href="https://github.com/lowkeystone"><ion-icon name="logo-github"></ion-icon></a></li>
@@ -98,8 +117,14 @@
 
         <div class="col-lg-6">
           <div class="about-description">
-            <div class="p-heading">I am a full-stack web Developer from Lancaster, PA. <br>
-              My passion is developing creative solutions for my clients.</div>
+            <div class="p-heading">
+              Hello! 
+              <h4>
+                My name is Bryant Mejia, I am a Full-Stack Web Developer from Lancaster, PA. <br/>
+                I currently live in beautiful Philadelphia, PA. 🏙 <br/>
+                I am motivated as a developer to build inspiring, high quality experience for end-users.
+              </h4>
+            </div>
             <a href="#portfolio" class="smoothScroll"><div class="seemyportfolio">View my Portfolio Below</div></a>
           </div>
         </div>
@@ -153,44 +178,44 @@
 
         <div class="portfolio-block">
           <img src="img/portfolio/portfolio-7.jpg" class="img-fluid" alt="">
-          <a href="https://bryant-s-htmlresume.web.app" target="_blank">
-            <div class="portfolio-detail">
-              <h4>HTML Resume</h4>
-              <p>My Resume Webpage | HTML TailwindCSS JQuery</p>
-              <div class="icons">
-                <ion-icon class="link" name="arrow-forward"></ion-icon>
-                <a href="google.com"><ion-icon class="code" name="logo-github"></ion-icon></a>
-              </div>
+          
+          <div class="portfolio-detail">
+            <a class="overlay" href="https://bryant-s-htmlresume.web.app" target="_blank"></a>
+            <h4>HTML Resume</h4>
+            <p>My Resume Webpage | HTML TailwindCSS JQuery</p>
+            <div class="icons">
+              <a href="https://bryant-s-htmlresume.web.app" target="_blank"><ion-icon class="link" name="arrow-forward"></ion-icon></a>
+              <a href="https://github.com/lowkeystone/htmlresume" target="_blank"><ion-icon class="code" name="logo-github"></ion-icon></a>
             </div>
-          </a>
+          </div>
         </div>
 
         <div class="portfolio-block">
           <img src="img/portfolio/portfolio-3.jpg" class="img-fluid" alt="">
-          <a href="/" target="_blank">
+          
             <div class="portfolio-detail">
+              <a class="overlay" href="/project/creditRecovery/" target="_blank"></a>
               <h4>Credit Recovery Solutions</h4>
               <p>Business Website | HTML CSS Bootstrap jQuery</p>
               <div class="icons">
-                <ion-icon name="arrow-forward"></ion-icon>
-                <a><ion-icon name="logo-github"></ion-icon></a>
+                <a href="/project/creditRecovery/" target="_blank"><ion-icon class="link" name="arrow-forward"></ion-icon></a>
+                <a href="https://github.com/lowkeystone/creditrecovery" target="_blank"><ion-icon class="code" name="logo-github"></ion-icon></a>
               </div>
             </div>
-          </a>
         </div>
 
         <div class="portfolio-block">
           <img src="img/portfolio/portfolio-1.jpg" class="img-fluid" alt="">
-          <a href="/project/hoursCalculatorjs/" target="_blank">
+          
             <div class="portfolio-detail">
+              <a class="overlay" href="/project/hoursCalculatorjs/" target="_blank"></a>
               <h4>Hours Calculator</h4>
               <p>Web App for calculating hours worked based on time | HTML CSS javascript</p>
               <div class="icons">
-                <ion-icon name="arrow-forward"></ion-icon>
-                <a><ion-icon name="logo-github"></ion-icon></a>
+                <a href="/project/hoursCalculatorjs/" target="_blank"><ion-icon class="link" name="arrow-forward"></ion-icon></a>
+                <a href="https://github.com/lowkeystone/hoursCalculatorjs" target="_blank"><ion-icon class="code" name="logo-github"></ion-icon></a>
               </div>
             </div>
-          </a>
         </div>
       </div>
     </div>
@@ -263,6 +288,26 @@
       </div>
     </div>
   </div>
+  <!-- Firebase Script -->
+  <script type="module">
+    // Import the functions you need from the SDKs you need
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/9.1.2/firebase-app.js";
+    // TODO: Add SDKs for Firebase products that you want to use
+    // https://firebase.google.com/docs/web/setup#available-libraries
+  
+    // Your web app's Firebase configuration
+    const firebaseConfig = {
+      apiKey: "AIzaSyAw_g9LKRii51iLgAgigIHeUqnmdTPk7jU",
+      authDomain: "bryantmejiasoftwareportfolio.firebaseapp.com",
+      projectId: "bryantmejiasoftwareportfolio",
+      storageBucket: "bryantmejiasoftwareportfolio.appspot.com",
+      messagingSenderId: "131281143061",
+      appId: "1:131281143061:web:22bf1f08dab576b6d4551c"
+    };
+  
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+  </script>
   <!-- Asset JS Files -->
   <!-- Jquery -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
