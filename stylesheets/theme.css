@@ -440,7 +440,7 @@ padding: 0;
   color: var(--blue);
 }
 
-.portfolio-block:hover .code:hover{
+.portfolio-block:hover .portfolio-detail:hover .icons .code:hover{
   color: var(--blue);
 }
 
@@ -485,6 +485,7 @@ padding: 0;
   padding: 0;
   font-family: 'IBM Plex Sans Thai', sans-serif;
   font-size: var(--md);
+  line-height: 1.3em;
   width: 50%;
 }
 
