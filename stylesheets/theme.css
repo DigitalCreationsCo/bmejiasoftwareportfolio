@@ -372,7 +372,6 @@ padding: 0;
   flex-wrap: wrap;
 }
 .grid .item {
-  border: solid white;
   margin: 10px;
   width: 24vw;
   height: auto;
@@ -380,10 +379,12 @@ padding: 0;
   z-index: 1;
   position: relative;
 }
-.grid .item img {
-  position: relative;
-  height: inherit;
-  width: inherit;
+.grid .item .image {
+  position: absolute;
+  height: 224px;
+  width: 100%;
+  overflow-y: hidden;
+  overflow-inline: none;
   transition: .04s;
   z-index: 2;
 }
@@ -404,8 +405,9 @@ padding: 0;
   transform: scale(1.10);
   z-index: 9;
 }
-.item:hover img {
-  opacity: .5;
+.item:hover .image {
+  height: auto;
+  width: 100%;
   z-index: 2;
 }
 .item:hover .detail {
